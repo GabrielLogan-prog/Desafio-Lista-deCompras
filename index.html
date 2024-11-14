@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lista de Compras</h1>
+        </header>
+        
+        <main>
+            <form id="form-add-item">
+                <input type="text" id="input-new-item" placeholder="Adicione um novo item" required>
+                <button type="submit">Adicionar</button>
+            </form></br>
+
+            <ul id="item-list">
+                <!-- Os itens da lista serão adicionados aqui dinamicamente via JavaScript -->
+            </ul>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

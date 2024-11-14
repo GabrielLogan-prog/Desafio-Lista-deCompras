@@ -1,0 +1,114 @@
+/* Resetando alguns estilos padrão */
+* {
+    margin: left;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F5F5F5;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #FF0000;
+    border-radius: 4px;
+   
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fffdfd;
+    
+    
+}
+
+#form-add-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#input-new-item {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+#form-add-item button {
+    padding: 12px 24px;
+    background-color: #7450AC;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#form-add-item button:hover {
+    background-color: #5F3D93;
+}
+
+#itemlist {
+    list-style-type: none;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.item span {
+    font-size: 16px;
+    text-align: left;
+}
+
+.item button {
+    background-color: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.item button:hover {
+    color: #FF0000;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #input-novo-item, #form-add-item button {
+        font-size: 14px;
+    }
+
+    .item span {
+        font-size: 14px;
+    }
+}
