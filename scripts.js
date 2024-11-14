@@ -48,7 +48,7 @@ function renderItems() {
 /**
  * Adiciona um novo item à lista de compras.
  * @function
- * @param {Event} e - O evento de submit do formulário. (subimit)
+ * @param {Event} e - O evento de submit do formulário. (submit)
  */
 function addItem(e) {
     e.preventDefault();
