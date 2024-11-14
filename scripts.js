@@ -19,7 +19,7 @@ const input = document.getElementById('input-new-item');
  * Elemento da lista onde os itens serão exibidos.
  * @type {HTMLUListElement}
  */
-const listItens = document.getElementById('item-list');
+const listItems = document.getElementById('item-list');
 
 /**
  * Array que armazena os itens da lista de compras.
@@ -32,8 +32,8 @@ let itens = JSON.parse(localStorage.getItem('itens')) || [];
  * Limpa a lista atual e cria elementos para cada item no array 'itens'.
  * @function
  */
-function renderItens() {
-    listItens.innerHTML = '';
+function renderItems() {
+    listItems.innerHTML = '';
     itens.forEach((item, index) => {
         const li = document.createElement('li');
         li.className = 'item';
@@ -41,7 +41,7 @@ function renderItens() {
             <span>${item}</span>
             <button onclick="removeItem(${index})">&#x1F5D1;</button>
         `;
-        listItens.appendChild(li);
+        listItems.appendChild(li);
     });
 }
 
@@ -57,7 +57,7 @@ function addItem(e) {
         itens.push(newItem);
         localStorage.setItem('itens', JSON.stringify(itens));
         input.value = '';
-        renderItens();
+        renderItems();
     }
 }
 
@@ -69,11 +69,11 @@ function addItem(e) {
 function removeItem(index) {
     itens.splice(index, 1);
     localStorage.setItem('itens', JSON.stringify(itens));
-    renderItens();
+    renderItems();
 }
 
 // Adiciona um ouvinte de evento para o envio do formulário
 form.addEventListener('submit', addItem);
 
 // Renderiza os itens iniciais
-renderItens();
+renderItems();
